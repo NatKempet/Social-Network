@@ -1,25 +1,30 @@
-import './App.css';
-import { useState } from 'react';
 import Tweet from './components/tweets'
 import Footer from './components/footer'
+import Button from './components/button';
+import './ver1/homepage.css';
 
-function App() {
-  const myElements = (
-    <>
+const App = () => {
+  return (
+    <div className="containner">
       <ul>
-        <li>sos</li>
-        <li>sdsd</li>
+        <li><a href="#gg">Foryou</a></li>
+        <li><a href="#zz">Following</a></li>
       </ul>
-    </>
-  )
-  let x = 11;
-  return <>
-    <Tweet title="lol" />
-    <Tweet />
-    <Footer />
-    <Footer />
-  </>
-};
 
+      <div className="menu">
+        <div id="menu">
+          <Button topic={'Home'} src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover" colors="primary:#f0f7ff"></Button>
+          <Button src="https://cdn.lordicon.com/xfftupfv.json" trigger="hover" colors="primary:#f0f7ff"></Button>
+          <Button src="https://cdn.lordicon.com/pnhskdva.json" trigger="hover" colors="primary:#f0f7ff"></Button>
+          <Button src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover" colors="primary:#f0f7ff"></Button>
+          <Button src="https://cdn.lordicon.com/psnhyobz.json" trigger="hover" colors="primary:#f0f7ff"></Button>
+          <Button src="https://cdn.lordicon.com/hpivxauj.json" trigger="hover" colors="primary:#f0f7ff"></Button>
+          <Button src="https://cdn.lordicon.com/xfftupfv.json" trigger="hover" colors="primary:#000000"></Button>
+          <Button src="https://cdn.lordicon.com/hpivxauj.json" trigger="hover" colors="primary:yellow"></Button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default App;
