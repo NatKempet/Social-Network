@@ -10,14 +10,14 @@ body {
 }
 
 .containner {
-    padding: 20px 35px 35px 35px ;
+    padding: 20px 35px 35px 35px;
     width: 900px;
     height: 600px;
     border-radius: 40px;
     background-color: #000000;
-    box-shadow: 13px 13px 20px #1f1f1f,-13px -13px 20px #252424;
+    box-shadow: 13px 13px 20px #1f1f1f, -13px -13px 20px #252424;
     position: fixed;
-    
+
 }
 
 a {
@@ -26,18 +26,18 @@ a {
     text-transform: none;
     transition: 0.25s ease;
     font-size: 20px;
-    position: ;
     right: 50px;
 }
 
 ul {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     list-style: none;
     top: 0px;
     gap: 20px;
-    
+
 }
+
 ul li {
     text-decoration: none;
     margin: 0 1em 0 1em;
@@ -49,24 +49,23 @@ ul :hover a {
 }
 
 ul :hover a :hover {
-    
+
     box-shadow: 0 2px 0 0 currentColor;
 }
 
 
 .menu {
-    display: ;
     justify-content: space-between;
     align-items: center;
     width: 300px;
     height: 550px;
-    padding: 10px; 
+    padding: 10px;
     position: absolute;
     left: -5px;
     /* background-color: #8EAAFB; */
- 
+
 }
-  
+
 
 .clickable-icon {
     background-color: rgb(44, 42, 47);
@@ -75,4 +74,3 @@ ul :hover a :hover {
     border-radius: 5px;
 
 }
-
