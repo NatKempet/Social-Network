@@ -19,6 +19,7 @@ function App() {
   <Tweet title = "lol"/>
   <Tweet />
   <Footer />
+  <Footer />
   </>
   };
 
