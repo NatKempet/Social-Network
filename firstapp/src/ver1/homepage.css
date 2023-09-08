@@ -8,28 +8,26 @@ body {
     padding: 0 20px;
     background-color: #040404;
 }
-.clickable-icon:focus{
-    background-color: rgb(78, 76, 76);
-    
+
+h {
+    position: relative;
+    top: 0px;
+    color: white;
+    font-size: 20px;
+    left: -120px;
+    font-weight: bold;
 }
-.clickable-icon:not(:focus){
-    background-color: #070707;
-}
+
+
 .containner {
-    padding: 20px 35px 35px 35px;
+    padding: 20px 35px 35px 35px ;
     width: 900px;
-    height: 600px;
+    height: 650px;
     border-radius: 40px;
     background-color: #000000;
-    box-shadow: 13px 13px 20px #1f1f1f, -13px -13px 20px #252424;
+    box-shadow: 13px 13px 20px #1f1f1f,-13px -13px 20px #252424;
     position: fixed;
-<<<<<<< HEAD:firstapp/src/homepage.css
  
-=======
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
->>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
 }
 
 a {
@@ -38,26 +36,23 @@ a {
     text-transform: none;
     transition: 0.25s ease;
     font-size: 20px;
-    right: 50px;
+    position: relative;
+    top: 25px;
+    text-align: center;
+    left: 60px;
 }
-
 ul {
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
     list-style: none;
-<<<<<<< HEAD:firstapp/src/homepage.css
-    top: 60px;
-    gap: 150px;
-    left: 40%;
+    top: 30px;
+    gap: 180px;
+    right: 0px;
     position: absolute;
-    
-=======
-    top: 0px;
-    gap: 20px;
-
->>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
+    width: 615px;
+    height: 60px;
+    border-bottom: 0.5px solid rgb(72, 71, 71);
 }
-
 ul li {
     text-decoration: none;
     margin: 0 1em 0 1em;
@@ -69,75 +64,86 @@ ul :hover a {
 }
 
 ul :hover a :hover {
-
+    
     box-shadow: 0 2px 0 0 currentColor;
 }
 
 
 .menu {
-<<<<<<< HEAD:firstapp/src/homepage.css
     
     /* justify-content: space-between; */
     /* align-items: center; */
-    width: 280px;
-    height: 635px;
-    padding: 30px; 
-    position:fixed;
-    left: 15px;
-    top: 100px; 
-    border-right: 0.5px solid rgb(72, 71, 71);
+    width: 260px;
+    height: 700px;
+    padding: 10px; 
+    position: absolute;
+    top: 0px;
+    border-right: 0.5px solid rgb(71, 71, 72);
+    
     
 }
   
-=======
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    height: 550px;
-    padding: 10px;
-    position: absolute;
-    left: -5px;
-    /* background-color: #8EAAFB; */
-
-}
-
-
->>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
 .clickable-icon {
+    background-color: #000000;
     width: 250px;
-<<<<<<< HEAD:firstapp/src/homepage.css
-    height: 50px;
-    border-radius: 10px;
+    height: 60px;
+    border-radius: 50px;
     box-sizing: border-box;
-    top: 100px; 
+    top: 80px;
+    position: relative; 
+    margin: -18px;
+    cursor: pointer;
     
-    
-    
-     
 }
+.clickable-icon:hover {
+    background-color: #242525;
+    ;
+  }
+
 p{
     color: #f7f4f4;
     padding: 15px;
     font-size: 20px;
+    margin-left: 30px;
+    /* margin-top: -10px; */
 }
 .home ,.search ,.favorite ,.communities ,.notifications ,.messages{
     position: absolute;
     left: 30px;
-    padding: 2px;
-=======
-    height: 30px;
-    border-radius: 5px;
-    color:#f0f7ff;
->>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
+   
 }
 
-.spider {
-    width: 60px;
-    height: 60px;
+.spd {
+    margin: 10px;
     position: absolute;
-    top: 0px;
-    padding: 0px;
 }
+.spider {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 180px;
+    width: 250px;
+    height: 60px;
+    left: -5px;
+    border-radius: 50px;
+}
+.post {
+   background-color: #2196F3; 
+}
+.btn:hover {
+    background-color: #0b7dda;
+    color: white;
+  }
 
 
 
