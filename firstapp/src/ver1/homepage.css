@@ -16,14 +16,20 @@ body {
     background-color: #070707;
 }
 .containner {
-    padding: 20px 35px 35px 35px ;
+    padding: 20px 35px 35px 35px;
     width: 900px;
     height: 600px;
     border-radius: 40px;
     background-color: #000000;
-    box-shadow: 13px 13px 20px #1f1f1f,-13px -13px 20px #252424;
+    box-shadow: 13px 13px 20px #1f1f1f, -13px -13px 20px #252424;
     position: fixed;
+<<<<<<< HEAD:firstapp/src/homepage.css
  
+=======
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+>>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
 }
 
 a {
@@ -32,20 +38,26 @@ a {
     text-transform: none;
     transition: 0.25s ease;
     font-size: 20px;
-    position: ;
     right: 50px;
 }
 
 ul {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     list-style: none;
+<<<<<<< HEAD:firstapp/src/homepage.css
     top: 60px;
     gap: 150px;
     left: 40%;
     position: absolute;
     
+=======
+    top: 0px;
+    gap: 20px;
+
+>>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
 }
+
 ul li {
     text-decoration: none;
     margin: 0 1em 0 1em;
@@ -57,12 +69,13 @@ ul :hover a {
 }
 
 ul :hover a :hover {
-    
+
     box-shadow: 0 2px 0 0 currentColor;
 }
 
 
 .menu {
+<<<<<<< HEAD:firstapp/src/homepage.css
     
     /* justify-content: space-between; */
     /* align-items: center; */
@@ -76,9 +89,23 @@ ul :hover a :hover {
     
 }
   
+=======
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 550px;
+    padding: 10px;
+    position: absolute;
+    left: -5px;
+    /* background-color: #8EAAFB; */
+
+}
+
+
+>>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
 .clickable-icon {
-    background-color: rgb(44, 42, 47);
     width: 250px;
+<<<<<<< HEAD:firstapp/src/homepage.css
     height: 50px;
     border-radius: 10px;
     box-sizing: border-box;
@@ -97,6 +124,11 @@ p{
     position: absolute;
     left: 30px;
     padding: 2px;
+=======
+    height: 30px;
+    border-radius: 5px;
+    color:#f0f7ff;
+>>>>>>> ce6b6cebe4d7c911a35ac76b00671f2d4ae9e087:firstapp/src/ver1/homepage.css
 }
 
 .spider {
