@@ -1,5 +1,3 @@
-import Tweet from './components/tweets'
-import Footer from './components/footer'
 import Button from './components/button';
 import './ver1/homepage.css';
 
