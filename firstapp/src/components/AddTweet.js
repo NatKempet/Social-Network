@@ -17,7 +17,7 @@ const AddTweet = () => {
         const allTweets = tweets;
         console.log(allTweets);
         allTweets.push({ title: title, content: content, likes: 0, id: tweets.length });
-        setTweet(allTweets);
+        setTweet((prev)=>[...prev,{ title: title, content: content, likes: 0, id: tweets.length }]);
         localStorage.setItem('tweets', JSON.stringify(allTweets));
     }
 
