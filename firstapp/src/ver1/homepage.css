@@ -100,7 +100,6 @@ ul :hover a :hover {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-
 }
 
 .clickable-icon:hover {
@@ -159,5 +158,11 @@ p {
 
 .btn:hover {
     background-color: #0b7dda;
+    color: white;
+}
+
+.boom {
+    position: absolute;
+    left: 650px;
     color: white;
 }

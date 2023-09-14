@@ -1,13 +1,13 @@
-import React, { useState, createContext } from "react";
-export const tweetContext = createContext();
+import React, { useState, createContext,useEffect } from 'react'
+export const TweetContext = createContext();
 export const TweetProvider = (props) => {
-  const [tweets, setTweet] = useState([
-    { title: "Hello", content: "React!", likes: 2, id: 0 },
-    { title: "2nd Tweet", content: "What a world!", likes: 6, id: 1 },
-  ]);
-  return (
-    <tweetContext.Provider value={[tweets, setTweet]}>
-      {props.children}
-    </tweetContext.Provider>
-  );
-};
+    const [tweets, setTweet] = useState(JSON.parse(localStorage.getItem('tweets')) || []);
+
+    return (
+        <TweetContext.Provider value={[tweets, setTweet]}>
+            {props.children}
+        </TweetContext.Provider>
+    )
+}
+
+export default TweetContext
