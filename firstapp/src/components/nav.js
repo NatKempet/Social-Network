@@ -1,9 +1,10 @@
-import React from 'react'
-
-const nav = () => {
+import React from "react";
+const Nav = () => {
   return (
-    <div>nav</div>
-  )
-}
-
-export default nav
+    <div>
+      {" "}
+      <h3>Profile: Ken</h3> <p>Number of Tweets: ?</p>{" "}
+    </div>
+  );
+};
+export default Nav;

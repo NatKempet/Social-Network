@@ -1,25 +1,29 @@
-import './App.css';
-import { useState } from 'react';
-import Tweet from './components/tweets'
-import Footer from './components/footer'
+import "./App.css";
+import { useState } from "react";
+import Tweet from "./components/tweets";
+import Footer from "./components/footer";
+import Nav from "./components/nav";
+import TweetList from "./components/tweetList";
 
 function App() {
-  const myElements = (
+  const [count, setcount] = useState(0);
+  return (
     <>
-      <ul>
-        <li>sos</li>
-        <li>sdsd</li>
-      </ul>
+      <Nav />
+      <Tweet title="yay" likes={count} />
+      <TweetList title="yay" likes={count} />
+      <div>
+        <p>You clicked {count} times</p>
+        <button
+          onClick={() => {
+            setcount(count + 1);
+          }}
+        >
+          Click me
+        </button>
+      </div>
     </>
-  )
-  let x = 11;
-  return <>
-    <Tweet title="lol" />
-    <Tweet />
-    <Footer />
-    <Footer />
-  </>
-};
-
+  );
+}
 
 export default App;

@@ -1,7 +1,7 @@
 import App from "../src/App";
 import firebase from "firebase/App";
 import "firebase/auth";
-import "firebase/firestore"
+import "firebase/firestore";
 
 const clientCredentials = {
     apiKey: "AIzaSyCsarY_ixkr4ISfh0Lg4K0987ge6UBaLOQ",
@@ -14,9 +14,25 @@ const clientCredentials = {
     measurementId: "G-5JHM4TV6F5"
 };
 
+class firebaseApp{
+    constructor() {
+        App.initializeApp(clientCredentials);
+        this.auth = App.auth();
+        this.ad = App.firestore();
+    }
+    login(email , password){
+        return this.auth.signInWithEmailAndPassword(email, password);
+    }
+    logout(){
+        return this.auth.signOut();
+    }   
+    
+}
 if(!firebase.getApps.length){
     firebase.initializeApp(clientCredentials);
 }
+
+
 
 export default firebase;
 
