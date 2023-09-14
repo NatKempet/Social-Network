@@ -6,21 +6,21 @@ import spider from './ver1/spider.png'
 const App = () => {
   return (
 <>
-  <div className="containner">
+  <div id="containner">
     <h>Home</h>
     <ul>
       <li>
-        <a href="#">Foryou</a>
+        <a href="#">For you</a>
       </li>
       <li>
         <a href="#">Following</a>
       </li>
     </ul>
-    <div className="menu">
+    <div id="menu">
       <div className="spd">
         <img className="spider" src={spider} alt="spider" />
       </div>
-      <div className="clickable-icon">
+      <div id="clickable-icon">
         <lord-icon
           style={{ transform: "translateY(6px)" }}
           className="home"
@@ -30,7 +30,7 @@ const App = () => {
         />
         <p>Home</p>
       </div>
-      <div className="clickable-icon">
+      <div id="clickable-icon">
         <lord-icon
           style={{ transform: "translateY(6px)" }}
           className="search"
@@ -40,7 +40,7 @@ const App = () => {
         />
         <p>Search</p>
       </div>
-      <div className="clickable-icon">
+      <div id="clickable-icon">
         <lord-icon
           style={{ transform: "translateY(6px)" }}
           className="favorite"
@@ -50,7 +50,7 @@ const App = () => {
         />
         <p>Favorite</p>
       </div>
-      <div className="clickable-icon">
+      <div id="clickable-icon">
         <lord-icon
           style={{ transform: "translateY(6px)" }}
           className="communities"
@@ -60,7 +60,7 @@ const App = () => {
         />
         <p>Communities</p>
       </div>
-      <div className="clickable-icon">
+      <div id="clickable-icon">
         <lord-icon
           style={{ transform: "translateY(6px)" }}
           className="notifications"
@@ -70,7 +70,7 @@ const App = () => {
         />
         <p>Notifications</p>
       </div>
-      <div className="clickable-icon">
+      <div id="clickable-icon">
         <lord-icon
           style={{ transform: "translateY(6px)" }}
           className="messages"
