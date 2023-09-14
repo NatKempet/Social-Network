@@ -1,19 +1,13 @@
 import './ver1/homepage.css'; //  TODO Remove this line
 import React from 'react';
 import spider from './ver1/spider.png'
-<<<<<<< HEAD
 import { Auth } from './auth';
-=======
->>>>>>> 1c2ee9a06f2b568d944a35647b08f2577153a56e
 
 const App = () => {
   return (
 <>
   <div className="containner">
-<<<<<<< HEAD
-    <Auth />
-=======
->>>>>>> 1c2ee9a06f2b568d944a35647b08f2577153a56e
+  
     <h>Home</h>
     <ul>
       <li>
@@ -90,6 +84,13 @@ const App = () => {
       <button className="btn post">Post</button>
     </div>
     <tweet/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <Auth />
   </div>
 </>
 
