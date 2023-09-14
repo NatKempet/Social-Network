@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from 'react'
+import { TweetContext } from './TweetContext';
+
 const Nav = () => {
-  return (
-    <div>
-      {" "}
-      <h3>Profile: Ken</h3> <p>Number of Tweets: ?</p>{" "}
-    </div>
-  );
-};
-export default Nav;
+    const [tweets, setTweets] = useContext(TweetContext);
+    return (
+        <div>
+            <h3>Profile: Ken</h3>
+            <p>Number of Tweets: {tweets.length}</p>
+        </div>
+    )
+}
+
+export default Nav
+
