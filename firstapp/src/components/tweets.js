@@ -7,10 +7,12 @@ const Tweet = (props) => {
   };
   return (
     <div className="Tweet">
-      <h1>{props.title}</h1>
+      {/* <h1>{props.title}</h1>
       <p>{props.content}</p>
       <p>Likes: {likes}</p>
-      <button onClick={handleLike}>Like</button>
+      <button onClick={handleLike}>Like</button> */}
+      <h1>GOODDAY</h1>
+      <p>GOODDAY</p>
     </div>
   );
 };

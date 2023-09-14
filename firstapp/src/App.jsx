@@ -1,4 +1,3 @@
-import Button from './components/button';
 import './ver1/homepage.css'; //  TODO Remove this line
 import React from 'react';
 import spider from './ver1/spider.png'
@@ -82,6 +81,7 @@ const App = () => {
       </div>
       <button className="btn post">Post</button>
     </div>
+    <tweet/>
   </div>
 </>
 
