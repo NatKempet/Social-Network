@@ -14,10 +14,11 @@ const AddTweet = () => {
     }
     const addTweet = (e) => {
         e.preventDefault();
+        setTweet((prev) => [...prev, { title: title, content: content, likes: 0, id: tweets.length }]);
         const allTweets = tweets;
         console.log(allTweets);
         allTweets.push({ title: title, content: content, likes: 0, id: tweets.length });
-        setTweet((prev)=>[...prev,{ title: title, content: content, likes: 0, id: tweets.length }]);
+
         localStorage.setItem('tweets', JSON.stringify(allTweets));
     }
 

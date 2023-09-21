@@ -1,6 +1,7 @@
 .Tweet {
     text-align: center;
     border: 1px solid white;
+    color: white;
     width: 400px;
     left: 700px;
 }

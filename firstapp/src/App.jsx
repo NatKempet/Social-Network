@@ -1,13 +1,41 @@
 import "./ver1/homepage.css"; //  TODO Remove this line
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
 import spider from "./ver1/spider.png";
-import { Auth } from "./auth";
 import { TweetProvider, TweetContext } from "./components/TweetContext";
-import TweetList from "./components/tweetList";
+import TweetList from "./components/TweetList";
 import AddTweet from "./components/AddTweet";
 import DeleteButton from "./components/DeleteButton";
+import { db } from "./Firebase/firebase";
+import {
+  collection,
+  onSnapshot,
+  serverTimestamp,
+  addDoc,
+} from "firebase/firestore";
 
 const App = () => {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState("");
+  useEffect(() => {
+    onSnapshot(collection(db, "todos"), (snapshot) => {
+      setTodos(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          item: doc.data(),
+        }))
+      );
+    });
+  }, [input]);
+
+  const addTodo = (e) => {
+    e.preventDefault();
+    addDoc(collection(db, "todos"), {
+      todo: input,
+      timestamp: serverTimestamp(),
+    });
+    setInput("");
+  };
+
   return (
     <TweetProvider>
       <>
@@ -85,15 +113,8 @@ const App = () => {
               />
               <p>Messages</p>
             </div>
-            <Auth />
-            <DeleteButton />
           </div>
-
-
-          <br />
-          <br />
-          <br />
-          <br />
+          <DeleteButton /> {/* temporary */}
           <div className="tweetBox">
             <AddTweet />
             <TweetList />

@@ -20,7 +20,7 @@ h {
 
 
 #containner {
-    
+
     padding: 20px 35px 35px 35px;
     width: 900px;
     height: 650px;
@@ -122,7 +122,7 @@ p {
 .messages {
     position: absolute;
     left: 30px;
-    
+
 
 }
 
@@ -164,13 +164,13 @@ p {
 
 @media (max-width: 450px) {
     #containner {
-        padding: 20px; 
+        padding: 20px;
     }
 }
 
 @media (min-width: 900px) {
     #containner {
-        border-radius: 40px; 
+        border-radius: 40px;
     }
 }
 
@@ -179,9 +179,14 @@ p {
     margin-left: 20px;
 } */
 
-      
+
 .boom {
     position: absolute;
     left: 650px;
     color: white;
+}
+
+.tweetBox {
+    position: absolute;
+    left: 350px;
 }
