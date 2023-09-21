@@ -118,6 +118,10 @@ const App = () => {
           <div className="tweetBox">
             <AddTweet />
             <TweetList />
+
+            <ul>
+              {todos.map((item) => (<AddTweet key={item.id} arr={item} />))}
+            </ul>
           </div>
         </div>
       </>

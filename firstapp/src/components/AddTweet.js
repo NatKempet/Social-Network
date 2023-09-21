@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext,useEffect } from 'react'
 import { TweetContext } from './TweetContext';
 
 const AddTweet = () => {
@@ -15,8 +15,8 @@ const AddTweet = () => {
     const addTweet = (e) => {
         e.preventDefault();
         setTweet((prev) => [...prev, { title: title, content: content, likes: 0, id: tweets.length }]);
-        const allTweets = tweets;
-        console.log(allTweets);
+        const new_tweets = tweets.map(tweet=>tweet); // create the copy of tweets content []
+        const allTweets = new_tweets;
         allTweets.push({ title: title, content: content, likes: 0, id: tweets.length });
 
         localStorage.setItem('tweets', JSON.stringify(allTweets));
