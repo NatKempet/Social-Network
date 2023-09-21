@@ -85,24 +85,19 @@ const App = () => {
               />
               <p>Messages</p>
             </div>
-            {/* <button
-              className="btn post"
-            >
-              post
-            </button> */}
-            <DeleteButton/>
+            <Auth />
+            <DeleteButton />
           </div>
+
+
           <br />
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <div className="boom">
+          <div className="tweetBox">
             <AddTweet />
             <TweetList />
           </div>
-          {/* <Auth /> */}
         </div>
       </>
     </TweetProvider>
