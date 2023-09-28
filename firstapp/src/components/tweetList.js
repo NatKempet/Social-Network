@@ -1,17 +1,10 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import Tweet from './Tweet';
 import { TweetContext } from './TweetContext';
-import { db } from '../Firebase/firebase';
-import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../Firebase/firebase'
 
 const TweetList = () => {
-    const getTweetsCollection = collection(db, "Post")
-    useEffect(() => {
-        const getTweets = async() =>{
-            
-        }
-    })
-    const [tweets, setTweet] = useContext([]);
+    const [tweets, setTweet] = useContext(TweetContext);
     return (
         <div>
             {tweets?.map(tweet => (

@@ -2,7 +2,6 @@ import { createUserWithEmailAndPassword, signOut,signInWithPopup } from "firebas
 import { auth,googleProvider } from "../Firebase/firebase";
 import { useState } from "react";
 import googleLogin from "./google.png";
-import "../App.css"
 
 
 export const Auth = () => {
