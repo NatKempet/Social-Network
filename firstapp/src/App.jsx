@@ -14,6 +14,10 @@ import {
 } from "firebase/firestore";
 import { Auth } from "./components/auth";
 
+// TODO make React Router work
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Login from "./pages/Login";
+
 
 const App = () => {
   const [todos, setTodos] = useState([]);
