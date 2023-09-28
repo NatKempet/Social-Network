@@ -3,7 +3,7 @@ import Tweet from './Tweet';
 import { TweetContext } from './TweetContext';
 import { db } from '../Firebase/firebase'
 
-const tweetList = () => {
+const TweetList = () => {
     const [tweets, setTweet] = useContext(TweetContext);
     return (
         <div>
@@ -14,4 +14,4 @@ const tweetList = () => {
     )
 }
 
-export default tweetList
+export default TweetList

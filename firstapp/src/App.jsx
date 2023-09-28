@@ -12,6 +12,8 @@ import {
   serverTimestamp,
   addDoc,
 } from "firebase/firestore";
+import { Auth } from "./components/auth";
+
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -40,6 +42,7 @@ const App = () => {
     <TweetProvider>
       <>
         <div id="containner">
+          <Auth />
           <h>Home</h>
           <ul>
             <li>
