@@ -2,7 +2,7 @@ import "./ver1/homepage.css"; //  TODO Remove this line
 import React, { useState, useEffect } from "react";
 import spider from "./ver1/spider.png";
 import { TweetProvider, TweetContext } from "./components/TweetContext";
-import TweetList from "./components/TweetList";
+import TweetList from "./components/tweetList";
 import AddTweet from "./components/AddTweet";
 import DeleteButton from "./components/DeleteButton";
 import { db } from "./Firebase/firebase";
