@@ -13,13 +13,14 @@ import {
   addDoc,
 } from "firebase/firestore";
 import { Auth } from "./components/auth";
+// import Login from "./pages/Login";
 
 // TODO make React Router work
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./pages/Login";
 
-
 const App = () => {
+  // be
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
   useEffect(() => {
@@ -41,11 +42,12 @@ const App = () => {
     });
     setInput("");
   };
+  // eb
 
   return (
     <TweetProvider>
       <>
-        <div id="containner">
+      <div id="containner">
           <Auth />
           <h>Home</h>
           <ul>

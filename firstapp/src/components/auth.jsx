@@ -1,8 +1,12 @@
-import { createUserWithEmailAndPassword, signOut,signInWithPopup } from "firebase/auth";
-import { auth,googleProvider } from "../Firebase/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signOut,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth, googleProvider } from "../Firebase/firebase";
 import { useState } from "react";
 import googleLogin from "./google.png";
-
+import "./auth.css";
 
 export const Auth = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +24,7 @@ export const Auth = () => {
   };
 
   return (
-    <div>
+    <div className="AUTH">
       <input
         placeholder="Email.."
         onChange={(e) => {
@@ -33,10 +37,19 @@ export const Auth = () => {
         onChange={(e) => [setPassword(e.target.value)]}
       />
       <br></br>
+      
       <button onClick={signIn}>Sign in</button>
       <button onClick={logOut}>Sign out</button>
       <br />
-      <img src={googleLogin} style={{ width: 150, height: 40}} onClick={signInWithGoogle}/>"
+
+      {email ? <fayHomeTwo /> /*<App2 />*/ : 
+      <img
+        src={googleLogin}
+        style={{ width: 150, height: 40 }}
+        onClick={signInWithGoogle}
+      />
+      }
+      
     </div>
   );
 };
