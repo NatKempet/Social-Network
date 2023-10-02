@@ -33,9 +33,9 @@ const TweetList = () => {
       <button onClick={addTweets}>Submit Post</button>
       {post.map((tweet) => (
         <div>
-        <h1 style={{color: "white"}}>title:{tweet.Title}</h1>
-        <h1 style={{color: "white"}}>description:{tweet.Description}</h1>
-        <h1 style={{color: "white"}}>Likes:{tweet.Like}</h1>
+        <div style={{color: "white"}}>title:{tweet.Title}</div>
+        <div style={{color: "white"}}>description:{tweet.Description}</div>
+        <div style={{color: "white"}}>Likes:{tweet.Like}</div>
         </div>
       ))}
     </div>
