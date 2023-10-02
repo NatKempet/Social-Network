@@ -87,7 +87,6 @@ const App = () => {
             </div>
             <DeleteButton /> {/* temporary */}
             <div className="tweetBox">
-                <AddTweet />
                 <TweetList />
             </div>
         </div>
