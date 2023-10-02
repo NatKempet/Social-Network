@@ -22,13 +22,12 @@ const TweetList = () => {
   });
   return (
     <div>
-      {tweets?.map((tweet) => (
-        <Tweet
-          title={post.title}
-          content={post.description}
-          likes={post.like}
-          key={tweet.id}
-        />
+      {post.map((tweet) => (
+        <div>
+        <h1>title:{tweet.title}</h1>
+        <h1>description:{tweet.description}</h1>
+        <h1>Likes:{tweet.like}</h1>
+        </div>
       ))}
     </div>
   );
