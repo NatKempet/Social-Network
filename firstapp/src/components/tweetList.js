@@ -2,31 +2,40 @@ import React, { useContext, useEffect, useState } from "react";
 import Tweet from "./Tweet";
 import { TweetContext } from "./TweetContext";
 import { db } from "../Firebase/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection,addDoc } from "firebase/firestore";
 
 const TweetList = () => {
-  const [tweets, setTweet] = useContext(TweetContext);
   const getTweetsCollection = collection(db, "Post");
   const [post, setPost] = useState([]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [likes, setLikes] = useState(0);
+  const getTweets = async () => {
+    const data = await getDocs(getTweetsCollection);
+    const filteredData = data.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    setPost(filteredData);
+    console.log(post);
+  };
   useEffect(() => {
-    const getTweets = async () => {
-      const data = await getDocs(getTweetsCollection);
-      const filteredData = data.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      setPost(filteredData);
-      console.log(post);
-    };
     getTweets();
   });
+  const addTweets = async() => {
+    await addDoc(getTweetsCollection,{Title:title,Description:description,Like:likes} );
+    getTweets();
+  }
   return (
     <div>
+      <input type="text" placeholder="Title" onChange={(e) => {setTitle(e.target.value)}}></input>
+      <input type="text" placeholder="Description" onChange={(e) => {setDescription(e.target.value)}}></input>
+      <button onClick={addTweets}>Submit Post</button>
       {post.map((tweet) => (
         <div>
-        <h1>title:{tweet.title}</h1>
-        <h1>description:{tweet.description}</h1>
-        <h1>Likes:{tweet.like}</h1>
+        <h1 style={{color: "white"}}>title:{tweet.Title}</h1>
+        <h1 style={{color: "white"}}>description:{tweet.Description}</h1>
+        <h1 style={{color: "white"}}>Likes:{tweet.Like}</h1>
         </div>
       ))}
     </div>
