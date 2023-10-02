@@ -20,29 +20,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./pages/Login";
 
 const App = () => {
-  // be
-  const [todos, setTodos] = useState([]);
-  const [input, setInput] = useState("");
-  useEffect(() => {
-    onSnapshot(collection(db, "todos"), (snapshot) => {
-      setTodos(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          item: doc.data(),
-        }))
-      );
-    });
-  }, [input]);
 
-  const addTodo = (e) => {
-    e.preventDefault();
-    addDoc(collection(db, "todos"), {
-      todo: input,
-      timestamp: serverTimestamp(),
-    });
-    setInput("");
-  };
-  // eb
 
   return (
     <TweetProvider>
@@ -128,9 +106,6 @@ const App = () => {
             <AddTweet />
             <TweetList />
 
-            <ul>
-              {todos.map((item) => (<AddTweet key={item.id} arr={item} />))}
-            </ul>
           </div>
         </div>
       </>
