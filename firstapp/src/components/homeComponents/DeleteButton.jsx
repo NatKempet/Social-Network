@@ -1,5 +1,5 @@
-import React,{useContext} from "react";
-import { TweetContext } from "./TweetContext";
+import React, { useContext } from "react";
+import { TweetContext } from "../TweetContext";
 
 const DeleteButton = () => {
   const [tweets, setTweet] = useContext(TweetContext);

@@ -4,7 +4,7 @@ import '../components/loginComponents/login.css'
 import AKImage from '../components/loginComponents/AK.png'
 import heartImage from '../components/loginComponents/heart.png'
 import jokerImage from '../components/loginComponents/joker.jpg'
-import { Auth } from '../components/auth.jsx';
+import { Auth } from '../components/loginComponents/auth.jsx';
 
 
 const Login = () => {

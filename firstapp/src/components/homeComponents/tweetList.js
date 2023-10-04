@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import Tweet from "./Tweet";
-import { TweetContext } from "./TweetContext";
-import { db } from "../Firebase/firebase";
-import { getDocs, collection,addDoc } from "firebase/firestore";
+import { TweetContext } from "../TweetContext";
+import { db } from "../../Firebase/firebase";
+import { getDocs, collection, addDoc } from "firebase/firestore";
 
 const TweetList = () => {
   const getTweetsCollection = collection(db, "Post");
@@ -22,20 +22,20 @@ const TweetList = () => {
   useEffect(() => {
     getTweets();
   });
-  const addTweets = async() => {
-    await addDoc(getTweetsCollection,{Title:title,Description:description,Like:likes} );
+  const addTweets = async () => {
+    await addDoc(getTweetsCollection, { Title: title, Description: description, Like: likes });
     getTweets();
   }
   return (
     <div>
-      <input type="text" placeholder="Title" onChange={(e) => {setTitle(e.target.value)}}></input>
-      <input type="text" placeholder="Description" onChange={(e) => {setDescription(e.target.value)}}></input>
+      <input type="text" placeholder="Title" onChange={(e) => { setTitle(e.target.value) }}></input>
+      <input type="text" placeholder="Description" onChange={(e) => { setDescription(e.target.value) }}></input>
       <button onClick={addTweets}>Submit Post</button>
       {post.map((tweet) => (
         <div>
-        <div style={{color: "white"}}>title:{tweet.Title}</div>
-        <div style={{color: "white"}}>description:{tweet.Description}</div>
-        <div style={{color: "white"}}>Likes:{tweet.Like}</div>
+          <div style={{ color: "white" }}>title:{tweet.Title}</div>
+          <div style={{ color: "white" }}>description:{tweet.Description}</div>
+          <div style={{ color: "white" }}>Likes:{tweet.Like}</div>
         </div>
       ))}
     </div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../components/homeComponents/Home.css"
 import spider from "../components/homeComponents/spider.png";
-import TweetList from "../components/tweetList";
-import AddTweet from "../components/AddTweet";
-import DeleteButton from "../components/DeleteButton";
+import TweetList from "../components/homeComponents/tweetList";
+import AddTweet from "../components/homeComponents/AddTweet";
+import DeleteButton from "../components/homeComponents/DeleteButton";
 
 
 const App = () => {

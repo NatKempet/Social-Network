@@ -3,7 +3,7 @@ import {
   signOut,
   signInWithPopup,
 } from "firebase/auth";
-import { auth, googleProvider } from "../Firebase/firebase";
+import { auth, googleProvider } from "../../Firebase/firebase";
 import { useState } from "react";
 import googleLogin from "./google.png";
 import "./auth.css";
