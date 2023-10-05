@@ -3,14 +3,13 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth,GoogleAuthProvider } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCsarY_ixkr4ISfh0Lg4K0987ge6UBaLOQ",
-  authDomain: "web-social-network-a6d5d.firebaseapp.com",
-  databaseURL: "https://web-social-network-a6d5d-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "web-social-network-a6d5d",
-  storageBucket: "web-social-network-a6d5d.appspot.com",
-  messagingSenderId: "1043304872400",
-  appId: "1:1043304872400:web:417dea19894c6dfce461d5",
-  measurementId: "G-5JHM4TV6F5"
+  apiKey: "AIzaSyA4dyyvIaDe54yQ9vqcwDtu4aBJtMTuk3o",
+  authDomain: "web-social-network-7bcaf.firebaseapp.com",
+  projectId: "web-social-network-7bcaf",
+  storageBucket: "web-social-network-7bcaf.appspot.com",
+  messagingSenderId: "946238496342",
+  appId: "1:946238496342:web:2261f2724276fe9a7d25f7",
+  measurementId: "G-66LFBDXFJ8"
 };
 
 // Sorry Nat I replace this with Prof's code
