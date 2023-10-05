@@ -20,12 +20,12 @@ const TweetList = () => {
     }));
     setPost(filteredData);
   };
-  useEffect(() => {
-    setTimeout(() => {
-      getTweets();
-      console.log(auth?.currentUser?.email);
-    }, 1000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     getTweets();
+  //     console.log(auth?.currentUser?.email);
+  //   }, 1000);
+  // });
   const addTweets = async () => {
     await addDoc(getTweetsCollection, {
       Title: title,
