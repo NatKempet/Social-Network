@@ -1,0 +1,93 @@
+/* ของ button : Reset Databases button */
+button {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ของ button : Post */
+.tweetList-btn {
+  position: relative;
+  /* top: 20px; */
+  margin: 10px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 25px;
+  border-style: none;
+  top: 15px;
+  left: 20px;
+}
+
+/* ของ placeholder : Title */
+.tweetList-Title {
+  font-size: 16px;
+    width: 150px;
+  position: relative;
+  background-color: #000000;
+  color: white;
+  border-style: none;
+  padding: 10px;
+}
+
+/* ของ placeholder : Description */
+.tweetList-Description {
+  font-size: 16px;
+  width: 150px;
+  position: relative;
+  background-color: #000000;
+  color: white;
+  border-style: none;
+  padding: 10px;
+}
+
+/* when typing post */
+.tweetList-posting {
+  color: #212020;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  top: 75px;
+  width: 445px;
+  height: 50px;
+  left: -63px;
+  border-bottom: 0.5px solid rgb(72, 71, 71);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* ของ placeholder : Email.. */
+.auth-Email {
+  position: relative;
+  top: 200px;
+  left: -650px;
+}
+
+/* ของ placeholder : Password.. */
+.auth-Password {
+  position: relative;
+  top: 230px;
+  left: -820px;
+}
+
+/* ของ image : Sign in with Google */
+.auth-sign-in-img {
+  position: relative;
+  top: 300px;
+  left: -740px;
+}
+
+/* ของ button : Sign in*/
+.auth-sign-in-btn {
+  position: relative;
+  top: 250px;
+  left: -740px;
+}
+
+/* ของ button : Sign out*/
+.auth-sign-out-btn {
+  position: relative;
+  top: 250px;
+  left: -740px;
+}

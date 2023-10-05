@@ -43,20 +43,24 @@ const App = () => {
     <TweetProvider>
       <>
         <div id="containner">
-          <Auth />
-          <h>Home</h>
-          <ul>
-            <li>
-              <a href="#">For you</a>
-            </li>
-            <li>
-              <a href="#">Following</a>
-            </li>
-          </ul>
-          <div id="menu">
-            <div className="spd">
+          <div className="spd">
               <img className="spider" src={spider} alt="spider" />
             </div>
+          <div id="card">
+            <Auth />
+            <h>Home</h>
+            <ul>
+              <li>
+                <a href="#">For you</a>
+              </li>
+              <li>
+                <a href="#">Following</a>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <div id="menu">
+            
             <div id="clickable-icon">
               <lord-icon
                 style={{ transform: "translateY(6px)" }}
@@ -123,7 +127,9 @@ const App = () => {
             <TweetList />
 
             <ul>
-              {todos.map((item) => (<AddTweet key={item.id} arr={item} />))}
+              {todos.map((item) => (
+                <AddTweet key={item.id} arr={item} />
+              ))}
             </ul>
           </div>
         </div>

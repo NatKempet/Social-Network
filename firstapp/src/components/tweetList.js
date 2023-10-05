@@ -4,6 +4,7 @@ import { TweetContext } from "./TweetContext";
 import { db } from "../Firebase/firebase";
 import { getDocs, collection, addDoc } from "firebase/firestore";
 import { auth } from "../Firebase/firebase";
+import "./style.css";
 
 const TweetList = () => {
   const getTweetsCollection = collection(db, "Post");
@@ -36,31 +37,36 @@ const TweetList = () => {
     getTweets();
   };
   return (
-    <div>
+    <div className="tweetList-posting">
       <input
+        className="tweetList-Title"
         type="text"
-        placeholder="Title"
+        placeholder="Title...."
         onChange={(e) => {
           setTitle(e.target.value);
         }}
       ></input>
+      {/* <br /> */}
       <input
+        className="tweetList-Description"
         type="text"
-        placeholder="Description"
+        placeholder="Description...."
         onChange={(e) => {
           setDescription(e.target.value);
         }}
       ></input>
+      {/* <br /> */}
       <button
+        className="tweetList-btn"
         onClick={() => {
-          if(auth?.currentUser?.email === undefined){
+          if (auth?.currentUser?.email === undefined) {
             alert("you are not logged in please try again");
-          }else{
+          } else {
             addTweets();
           }
         }}
       >
-        Submit Post
+        Post
       </button>
       {post.map((tweet) => (
         <div>
