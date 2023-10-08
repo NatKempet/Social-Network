@@ -4,41 +4,42 @@ button {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* */
-
 /* ของ button : Post */
 .tweetList-btn {
-  position: relative;
-  /* top: 20px; */
+  position: fixed;
   margin: 10px;
   width: 100px;
   padding: 5px;
   border-radius: 25px;
   border-style: none;
-  top: 15px;
-  left: 20px;
+  top: 180px;
+  left: 990px;
 }
 
 /* ของ placeholder : Title */
 .tweetList-Title {
   font-size: 16px;
-    width: 150px;
-  position: relative;
+  width: 150px;
+  position: fixed;
   background-color: #000000;
   color: white;
   border-style: none;
   padding: 10px;
+  top: 150px;
+  left: 650px;
 }
 
 /* ของ placeholder : Description */
 .tweetList-Description {
   font-size: 16px;
   width: 150px;
-  position: relative;
+  position: fixed;
   background-color: #000000;
   color: white;
   border-style: none;
   padding: 10px;
+  top: 150px;
+  left: 825px;
 }
 
 /* when typing post */
@@ -47,7 +48,7 @@ button {
   padding: 14px 28px;
   font-size: 20px;
   cursor: pointer;
-  position: relative;
+  position: fixed;
   top: 75px;
   width: 445px;
   height: 50px;
@@ -57,39 +58,66 @@ button {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border-style: none;
+}
+
+/* ทวิตข้อความที่ขึ้น */
+.tweet-message {
+  border: 1px solid blue;
+  position: relative;
+  top: 157px;
+  font-size: 5px;
+  /* margin: 0px; */
+}
+
+.new-tweets{
+  /* display: flex;
+  flex-direction: column;
+  display: block; */
+}
+
+.tweetBox {
+  /* position: relative; */
+  /* margin: 0px; */
+  /* width: 100%;
+  height: 100px; */
+  /* border-style: none; */
+  /* border: 1px solid red;
+  top: 10px; */
+
 }
 
 /* ของ placeholder : Email.. */
-.auth-Email {
+/* .auth-Email {
   position: relative;
   top: 200px;
   left: -650px;
-}
+} */
 
 /* ของ placeholder : Password.. */
-.auth-Password {
+/* .auth-Password {
   position: relative;
   top: 230px;
   left: -820px;
-}
+} */
 
 /* ของ image : Sign in with Google */
-.auth-sign-in-img {
+/* .auth-sign-in-img {
   position: relative;
   top: 300px;
   left: -740px;
-}
+} */
 
 /* ของ button : Sign in*/
-.auth-sign-in-btn {
+/* .auth-sign-in-btn {
   position: relative;
   top: 250px;
   left: -740px;
-}
+} */
 
 /* ของ button : Sign out*/
-.auth-sign-out-btn {
+/* .auth-sign-out-btn {
   position: relative;
   top: 250px;
   left: -740px;
-}
+} */

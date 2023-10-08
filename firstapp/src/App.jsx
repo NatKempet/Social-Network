@@ -14,8 +14,6 @@ import {
 } from "firebase/firestore";
 import { Auth } from "./components/auth";
 
-// hi
-
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
@@ -42,25 +40,31 @@ const App = () => {
   return (
     <TweetProvider>
       <>
+        <h9>J</h9>
+        <h10>J</h10>
         <div id="containner">
           <div className="spd">
-              <img className="spider" src={spider} alt="spider" />
-            </div>
-          <div id="card">
-            <Auth />
+            <img className="spider" src={spider} alt="spider" />
+          </div>
+          <div id="header">
+            {/* <Auth /> */}
             <h>Home</h>
             <ul>
               <li>
-                <a href="#">For you</a>
+                <a href="#" className="for-you">
+                  For you
+                </a>
               </li>
               <li>
-                <a href="#">Following</a>
+                <a href="#" className="following">
+                  Following
+                </a>
               </li>
             </ul>
           </div>
           <hr />
+          <div id="card2"></div>
           <div id="menu">
-            
             <div id="clickable-icon">
               <lord-icon
                 style={{ transform: "translateY(6px)" }}
@@ -125,10 +129,10 @@ const App = () => {
           <DeleteButton /> {/* temporary */}
           <div className="tweetBox">
             <TweetList />
-
+            <hr className="hr2" />
             <ul>
               {todos.map((item) => (
-                <AddTweet key={item.id} arr={item} />
+                <AddTweet className="new-tweets" key={item.id} arr={item} />
               ))}
             </ul>
           </div>

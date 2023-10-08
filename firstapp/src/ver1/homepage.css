@@ -1,16 +1,53 @@
 body {
-  text-align: center;
-  display: flex;
+  /* display: flex; */
   height: 100vh;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   padding: 0 20px;
-  /* background-color: #000000; */
+  background-color: #000000;
+}
+
+#card2 {
+  position: fixed;
+  right: 280px;
+  height: 620px;
+  border-radius: 40px;
+  width: 250px;
+  background-color: #171616;
+  top: 60px;
+  z-index: -1;
+  transform: rotate(-175deg);
+  box-shadow: -2px -2px 8px rgb(76, 74, 74), -2px -2px 12px rgba(89, 80, 80, 0.5), inset 2px 2px 4px rgba(83, 82, 82, 0.1), 2px 2px 8px rgba(97, 95, 95, 0.3);
+}
+
+h9 {
+  color: #1c1b1b;
+  position: fixed;
+  font-size: 5em;
+  top: 10px;
+  left: 30px;
+  font-family: Georgia;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #f4f0f066;
+  z-index: 1;
+}
+
+h10 {
+  color: #1c1b1b;
+  position: fixed;
+  font-size: 5em;
+  bottom: 10px;
+  right: 30px;
+  font-family: Georgia;
+  font-weight: bold;
+  transform: rotate(180deg);
+  text-shadow: 0 1px 0 rgba(244, 240, 240, 0.4);
+  z-index: 1;
 }
 
 h {
-  position: relative;
+  position: fixed;
   top: 0px;
   color: white;
   font-size: 20px;
@@ -23,7 +60,7 @@ h {
   width: 900px;
   height: 650px;
   background-color: #000000;
-  position: relative;
+  position: fixed;
   top: 0px;
   left: 50px;
 }
@@ -34,14 +71,26 @@ a {
   text-transform: none;
   transition: 0.25s ease;
   font-size: 20px;
-  position: relative;
-  top: 25px;
+  position: fixed;
+  top: 110px;
+  width: 250px;
   text-align: center;
-  left: 60px;
+}
+
+.for-you {
+  position: fixed;
+  display: block;
+  left: 612px;
+}
+
+.following {
+  position: fixed;
+  left: 862px;
+  display: block;
 }
 
 ul {
-  position: absolute;
+  position: fixed;
   display: flex;
   gap: 150px;
   list-style: none;
@@ -52,16 +101,22 @@ ul {
 }
 
 hr {
-  position: relative;
-  top: 90px;
+  position: fixed;
+  top: 126px;
   width: 499px;
-  left: 53px;
+  left: 612px;
   border-bottom: 0.5px solid rgb(72, 71, 71);
 }
 
+.hr2 {
+  position: fixed;
+  top: 220px;
+  z-index: -1;
+} 
+
 ul li {
   text-decoration: none;
-  margin: 0 1em 0 1em;
+  /* margin: 0 1em 0 1em; */
 }
 
 ul :hover a {
@@ -77,9 +132,9 @@ ul :hover a :hover {
   width: 260px;
   height: 685px;
   padding: 10px;
-  left: 5px;
-  position: absolute;
-  top: 0px;
+  left: 300px;
+  position: fixed;
+  top: 50px;
 }
 
 #clickable-icon {
@@ -140,7 +195,9 @@ p {
 .spider {
   width: 65px;
   height: 65px;
-  position: absolute;
+  position: fixed;
+  left: 330px;
+  top: 40px;
 }
 
 .btn {
@@ -149,13 +206,12 @@ p {
   padding: 14px 28px;
   font-size: 20px;
   cursor: pointer;
-  position: absolute;
-  bottom: 180px;
+  position: fixed;
+  top: 525px;
   width: 250px;
   height: 60px;
-  left: 16px;
+  left: 320px;
   border-radius: 50px;
-  bottom: 150px;
   box-shadow: -2px -2px 8px rgb(76, 74, 74),
     -2px -2px 12px rgba(89, 80, 80, 0.5),
     inset 2px 2px 4px rgba(83, 82, 82, 0.1), 2px 2px 8px rgba(97, 95, 95, 0.3);
@@ -183,17 +239,19 @@ p {
 }
 
 .boom {
-  position: absolute;
+  position: fixed;
   left: 650px;
   color: white;
 }
 
 .tweetBox {
-  position: absolute;
-  left: 350px;
+  position: fixed;
+  left: 675px;
+  top: 45px;
+  border-style: none;
 }
 
-#card {
+#header {
   position: fixed;
   right: 360px;
   height: 650px;
@@ -206,10 +264,10 @@ p {
     inset 2px 2px 4px rgba(83, 82, 82, 0.1), 2px 2px 8px rgba(97, 95, 95, 0.3);
 }
 
-#card h {
-  position: absolute;
-  left: 35px;
-  top: 25px;
+#header h {
+  position: fixed;
+  left: 640px;
+  top: 70px;
   font-family: Georgia, "Times New Roman", Times, serif;
   opacity: 0.7;
 }
