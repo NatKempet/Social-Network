@@ -4,6 +4,7 @@ import { TweetContext } from "./TweetContext";
 import { db } from "../Firebase/firebase";
 import { getDocs, collection, addDoc } from "firebase/firestore";
 import { auth } from "../Firebase/firebase";
+import "./style.css";
 
 const TweetList = () => {
   const getTweetsCollection = collection(db, "Post");
@@ -36,39 +37,45 @@ const TweetList = () => {
     getTweets();
   };
   return (
-    <div>
+    <div className="tweetList-posting">
       <input
+        className="tweetList-Title"
         type="text"
-        placeholder="Title"
+        placeholder="Title...."
         onChange={(e) => {
           setTitle(e.target.value);
         }}
       ></input>
-      <input
+      {/* <input
+        className="tweetList-Description"
         type="text"
-        placeholder="Description"
+        placeholder="Description...."
         onChange={(e) => {
           setDescription(e.target.value);
         }}
-      ></input>
+      ></input> */}
       <button
+        className="tweetList-btn"
         onClick={() => {
-          if(auth?.currentUser?.email === undefined){
+          if (auth?.currentUser?.email === undefined) {
             alert("you are not logged in please try again");
-          }else{
+          } else {
             addTweets();
           }
         }}
       >
-        Submit Post
+        <h13 className="Post-Post">Post</h13>
       </button>
       {post.map((tweet) => (
-        <div>
-          <h1 style={{ color: "white" }}>tweet:{tweet.email}</h1>
-          <h1 style={{ color: "white" }}>title:{tweet.Title}</h1>
-          <h1 style={{ color: "white" }}>description:{tweet.Description}</h1>
-          <h1 style={{ color: "white" }}>Likes:{tweet.Like}</h1>
-        </div>
+        
+          <div className="tweet-message">
+            <h1 className="EMAIL" style={{ color: "white" }}>tweet:{tweet.email}</h1>
+            <h1 className="TITLE" style={{ color: "white" }}>title:{tweet.Title}</h1>
+            {/* <h1 className="DES" style={{ color: "white" }}>description:{tweet.Description}</h1> */}
+            <h1 className="LIKE" style={{ color: "white" }}>Likes:{tweet.Like}</h1>
+          </div>
+          
+        
       ))}
     </div>
   );

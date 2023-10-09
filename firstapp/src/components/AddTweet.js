@@ -1,5 +1,6 @@
 import React, { useState, useContext,useEffect } from 'react'
 import { TweetContext } from './TweetContext';
+import "./style.css";
 
 const AddTweet = () => {
     const [title, setTitle] = useState('');
