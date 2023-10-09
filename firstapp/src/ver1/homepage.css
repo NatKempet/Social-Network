@@ -1,11 +1,12 @@
 body {
   /* display: flex; */
-  height: 100vh;
-  width: 100%;
+  weight: 100vh;
+  width: 50%;
   /* justify-content: center; */
   /* align-items: center; */
-  padding: 0 20px;
+  /* padding: 0 20px; */
   background-color: #000000;
+  position: relative;
 }
 
 #card2 {
@@ -16,9 +17,11 @@ body {
   width: 250px;
   background-color: #171616;
   top: 60px;
-  z-index: -1;
+  z-index: -15;
   transform: rotate(-175deg);
-  box-shadow: -2px -2px 8px rgb(76, 74, 74), -2px -2px 12px rgba(89, 80, 80, 0.5), inset 2px 2px 4px rgba(83, 82, 82, 0.1), 2px 2px 8px rgba(97, 95, 95, 0.3);
+  box-shadow: -2px -2px 8px rgb(76, 74, 74),
+    -2px -2px 12px rgba(89, 80, 80, 0.5),
+    inset 2px 2px 4px rgba(83, 82, 82, 0.1), 2px 2px 8px rgba(97, 95, 95, 0.3);
 }
 
 h9 {
@@ -53,17 +56,18 @@ h {
   font-size: 20px;
   left: -120px;
   font-weight: bold;
+  
 }
 
 #containner {
-  padding: 20px 35px 35px 35px;
-  width: 900px;
+  /* padding: 20px 35px 35px 35px; */
+  /* width: 700px;
   height: 650px;
   background-color: #000000;
-  position: fixed;
+  position: relative;
   top: 0px;
-  left: 50px;
-}
+  left: 50px; */
+} 
 
 a {
   text-decoration: none;
@@ -80,7 +84,9 @@ a {
 .for-you {
   position: fixed;
   display: block;
-  left: 612px;
+  left: 650px;
+  
+  /* z-index: 100; */
 }
 
 .following {
@@ -98,21 +104,22 @@ ul {
   height: 60px;
   left: -33px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  /* z-index: -1; */
 }
 
 hr {
   position: fixed;
   top: 126px;
   width: 499px;
-  left: 612px;
-  border-bottom: 0.5px solid rgb(72, 71, 71);
+  left: 627px;
+  border-bottom: 0.5px solid rgb(22, 22, 22);
 }
 
-.hr2 {
+/* .hr2 {
   position: fixed;
   top: 220px;
   z-index: -1;
-} 
+} */
 
 ul li {
   text-decoration: none;
@@ -185,7 +192,7 @@ p {
 .messages {
   position: absolute;
   left: 30px;
-} 
+}
 
 .spd {
   margin: 10px;
@@ -245,23 +252,51 @@ p {
 }
 
 .tweetBox {
-  position: fixed;
+  position: relative;
   left: 675px;
   top: 45px;
   border-style: none;
 }
 
-#header {
+#card1 {
+  z-index: -14;
   position: fixed;
   right: 360px;
   height: 650px;
   width: 500px;
-  background-color: #000000;
+  background-color: black;
   top: 50px;
   border-radius: 40px;
   box-shadow: -2px -2px 8px rgb(76, 74, 74),
     -2px -2px 12px rgba(89, 80, 80, 0.5),
     inset 2px 2px 4px rgba(83, 82, 82, 0.1), 2px 2px 8px rgba(97, 95, 95, 0.3);
+}
+
+.homie {
+  position: fixed;
+  left: 650px;
+  top: 70px;
+  z-index: 100;
+}
+
+#for-you {
+  border-radius: 40px;
+  background-color: rgb(0, 0, 0);
+  width: 460px;
+  position: fixed;
+  /* background-color: #000000; */
+  left: 613px;
+  /* left: 628px; */
+
+  height: 86px;
+  top: 34px;
+  border-radius: 40px 40px 0px 0px;
+  z-index: 2;
+  box-shadow: -2px -2px 8px rgb(76, 74, 74),
+    -2px -2px 12px rgba(89, 80, 80, 0.5),
+    inset 2px 2px 4px rgba(83, 82, 82, 0.1), 0px 0px 0px rgba(0, 0, 0, 0);
+    
+
 }
 
 #header h {

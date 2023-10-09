@@ -40,16 +40,18 @@ const App = () => {
   return (
     <TweetProvider>
       <>
+        <div className="black-space"></div>
         <h9>J</h9>
         <h10>J</h10>
         <div id="containner">
           <div className="spd">
             <img className="spider" src={spider} alt="spider" />
           </div>
-          <div id="header">
+
+          <div id="card1"> </div>
             {/* <Auth /> */}
-            <h>Home</h>
-            <ul>
+            <h className="homie">Home</h>
+            <ul id="for-you">
               <li>
                 <a href="#" className="for-you">
                   For you
@@ -61,8 +63,8 @@ const App = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          <hr />
+         
+          {/* <hr /> */}
           <div id="card2"></div>
           <div id="menu">
             <div id="clickable-icon">
@@ -127,15 +129,19 @@ const App = () => {
             </div>
           </div>
           <DeleteButton /> {/* temporary */}
+
+
           <div className="tweetBox">
             <TweetList />
-            <hr className="hr2" />
+            {/* <hr className="hr2" /> */}
             <ul>
               {todos.map((item) => (
                 <AddTweet className="new-tweets" key={item.id} arr={item} />
               ))}
             </ul>
           </div>
+
+
         </div>
       </>
     </TweetProvider>

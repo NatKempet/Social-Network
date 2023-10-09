@@ -46,14 +46,14 @@ const TweetList = () => {
           setTitle(e.target.value);
         }}
       ></input>
-      <input
+      {/* <input
         className="tweetList-Description"
         type="text"
         placeholder="Description...."
         onChange={(e) => {
           setDescription(e.target.value);
         }}
-      ></input>
+      ></input> */}
       <button
         className="tweetList-btn"
         onClick={() => {
@@ -64,17 +64,18 @@ const TweetList = () => {
           }
         }}
       >
-        Post
+        <h13 className="Post-Post">Post</h13>
       </button>
       {post.map((tweet) => (
-        <div >
+        
           <div className="tweet-message">
-            <h1 style={{ color: "white" }}>tweet:{tweet.email}</h1>
-            <h1 style={{ color: "white" }}>title:{tweet.Title}</h1>
-            <h1 style={{ color: "white" }}>description:{tweet.Description}</h1>
-            <h1 style={{ color: "white" }}>Likes:{tweet.Like}</h1>
+            <h1 className="EMAIL" style={{ color: "white" }}>tweet:{tweet.email}</h1>
+            <h1 className="TITLE" style={{ color: "white" }}>title:{tweet.Title}</h1>
+            {/* <h1 className="DES" style={{ color: "white" }}>description:{tweet.Description}</h1> */}
+            <h1 className="LIKE" style={{ color: "white" }}>Likes:{tweet.Like}</h1>
           </div>
-        </div>
+          
+        
       ))}
     </div>
   );
