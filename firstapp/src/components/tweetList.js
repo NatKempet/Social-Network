@@ -21,12 +21,6 @@ const TweetList = () => {
     }));
     setPost(filteredData);
   };
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     getTweets();
-  //     console.log(auth?.currentUser?.email);
-  //   }, 1000);
-  // });
   const addTweets = async () => {
     await addDoc(getTweetsCollection, {
       Title: title,
@@ -46,14 +40,6 @@ const TweetList = () => {
           setTitle(e.target.value);
         }}
       ></input>
-      {/* <input
-        className="tweetList-Description"
-        type="text"
-        placeholder="Description...."
-        onChange={(e) => {
-          setDescription(e.target.value);
-        }}
-      ></input> */}
       <button
         className="tweetList-btn"
         onClick={() => {
@@ -71,7 +57,6 @@ const TweetList = () => {
           <div className="tweet-message">
             <h1 className="EMAIL" style={{ color: "white" }}>tweet:{tweet.email}</h1>
             <h1 className="TITLE" style={{ color: "white" }}>title:{tweet.Title}</h1>
-            {/* <h1 className="DES" style={{ color: "white" }}>description:{tweet.Description}</h1> */}
             <h1 className="LIKE" style={{ color: "white" }}>Likes:{tweet.Like}</h1>
           </div>
           

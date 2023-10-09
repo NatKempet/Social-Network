@@ -15,27 +15,6 @@ import {
 import { Auth } from "./components/auth";
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
-  const [input, setInput] = useState("");
-  useEffect(() => {
-    onSnapshot(collection(db, "todos"), (snapshot) => {
-      setTodos(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          item: doc.data(),
-        }))
-      );
-    });
-  }, [input]);
-
-  const addTodo = (e) => {
-    e.preventDefault();
-    addDoc(collection(db, "todos"), {
-      todo: input,
-      timestamp: serverTimestamp(),
-    });
-    setInput("");
-  };
 
   return (
     <TweetProvider>
@@ -134,11 +113,6 @@ const App = () => {
           <div className="tweetBox">
             <TweetList />
             {/* <hr className="hr2" /> */}
-            <ul>
-              {todos.map((item) => (
-                <AddTweet className="new-tweets" key={item.id} arr={item} />
-              ))}
-            </ul>
           </div>
 
 
