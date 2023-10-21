@@ -13,13 +13,13 @@ export const Auth = () => {
   const [password, setPassword] = useState("");
   console.log(auth?.currentUser?.email);
 
-  const signIn = async () => {
+  const signIn = async () => { // sign up to server
     await createUserWithEmailAndPassword(auth, email, password);
   };
-  const logOut = async () => {
+  const logOut = async () => { // log out off the firebase
     await signOut(auth);
   };
-  const signInWithGoogle = async () => {
+  const signInWithGoogle = async () => { // sign in with google
     await signInWithPopup(auth, googleProvider);
   };
 
