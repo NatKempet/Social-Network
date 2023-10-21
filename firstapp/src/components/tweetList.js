@@ -15,20 +15,20 @@ const TweetList = () => {
   const [likes, setLikes] = useState(0);
   const getTweets = async () => {
     const data = await getDocs(getTweetsCollection);
-    const filteredData = data.docs.map((doc) => ({
+    const filteredData = data.docs.map((doc) => ({ // filter the data from firebase
       ...doc.data(),
       id: doc.id,
     }));
     setPost(filteredData);
   };
-  const addTweets = async () => {
+  const addTweets = async () => { //add the tweets 
     await addDoc(getTweetsCollection, {
       Title: title,
       Description: description,
       Like: likes,
       email: auth?.currentUser?.email,
     });
-    getTweets();
+    getTweets(); // get the tweets and update it
   };
   return (
     <div className="tweetList-posting">
