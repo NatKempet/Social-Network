@@ -48,7 +48,8 @@ export const Auth = () => {
         style={{ width: 150, height: 40 }}
         onClick={signInWithGoogle}
       />
-      "
     </div>
   );
 };
+
+export default Auth;

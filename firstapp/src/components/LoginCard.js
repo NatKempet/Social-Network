@@ -3,6 +3,7 @@ import './LoginCard.css';
 import heartImage from './LoginHTML/heart.png';
 import akImage from './LoginHTML/AK.png';
 import joker from './LoginHTML/joker.jpg';
+import Auth from './Auth';
 
 const LoginCard = () => {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -27,9 +28,8 @@ const LoginCard = () => {
 
             <div
                 className={`flip-card1 ${isFlipped ? 'flipped' : ''}`}
-                onClick={flipCard}
+                // onClick={flipCard}
             >
-
 
                 <div className="flip-card1-inner">
                     <div className="flip-card1-front">
@@ -38,6 +38,8 @@ const LoginCard = () => {
                         <div className="linedown"></div>
                         <div className="lineleft"></div>
                         <div className="lineright"></div>
+                        <div className='Auth'><Auth /></div>
+
                     </div>
                     <div className="flip-card1-back">
                         <h4>SIGN IN</h4>
