@@ -103,7 +103,7 @@ h2 {
     perspective: 1000px;
     position: fixed;
     left: 50%;
-    top: 16%;
+    top: 20%;
     cursor: pointer;
 }
 
@@ -144,9 +144,9 @@ h2 {
 /* Joker Image Styles */
 #joker {
     position: fixed;
-    height: 160%;
-    top: 0%;
-    left: -80%;
+    height: 55%;
+    top: 20%;
+    left: 35%;
     z-index: -1;
     transform: rotate(-20deg);
     box-shadow: 10px 10px rgba(245, 244, 244, 0.5);
@@ -179,7 +179,7 @@ h7 {
 h8 {
     position: fixed;
     font-size: 30px;
-    top: 2%;
+    top: 0%;
     left: 15px;
 }
 
