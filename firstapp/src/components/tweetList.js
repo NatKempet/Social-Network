@@ -73,9 +73,9 @@ const TweetList = () => {
       {post.map((tweet) => (
         
           <div className="winTweet">
-            <div className="" style={{ color: "white" }}>tweet:{tweet.email}</div>
-            <div className="" style={{ color: "white" }}>title:{tweet.Title}</div>
-            <div className="" style={{ color: "white" }}>Likes:{tweet.Like}</div>
+            <div className="" style={{ color: "white" }}>Author: {tweet.email}</div>
+            <div className="" style={{ color: "white" }}>{tweet.Title}</div>
+            <div className="" style={{ color: "white" }}>Likes: {tweet.Like}</div>
             <button onClick={() => remove(tweet.id)}>Delete</button>
             <button onClick={() => {
               const currentLikes = tweet.Like;

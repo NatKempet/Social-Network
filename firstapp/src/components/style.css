@@ -209,4 +209,7 @@ h13 {
 .winTweet {
   border: white solid;
   width: 50% ;
+  text-align: center;
+  border-radius: 15px;
+  padding: 15px;
 }
