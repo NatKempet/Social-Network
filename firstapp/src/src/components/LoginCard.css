@@ -1,0 +1,280 @@
+/* Global Styles */
+.background {
+    background-color: #000000;
+    position: fixed;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lines */
+#up {
+    position: fixed;
+    top: 8%;
+    width: 85%; 
+    border-top: 0.2em solid #717274; 
+    display: flex;
+    left: 10%; 
+}
+
+#down {
+    position: fixed;
+    bottom: 8%; 
+    width: 80%; 
+    border-bottom: 0.2em solid #717274; 
+    display: flex;
+    left: 10%; 
+}
+
+#left {
+    height: 56%; 
+    position: fixed;
+    color: gray;
+    border-left: 0.2em solid #717274; 
+    bottom: 20%; 
+    left: 5%; 
+}
+
+#right {
+    height: 68%; 
+    position: fixed;
+    color: gray;
+    border-right: 0.2em solid #717274; 
+    bottom: 24%; 
+    right: 5%; 
+}
+
+/* Headings */
+h1 {
+    color: #717274;
+    position: fixed;
+    font-size: 4em; 
+    top: -2%; 
+    left: 4%; 
+}   
+
+h2 {
+    color: #717274;
+    position: fixed;
+    font-size: 4em; 
+    bottom: -3%; 
+    right: 3%; 
+    transform: rotateY(180deg);
+}
+
+/* Images */
+#pic1 {
+    position: fixed;
+    top: 12.5%;
+    height: 8%;
+    left: 3.5%;
+}
+
+#pic2 {
+    position: fixed;
+    height: 8%;
+    bottom: 13%;
+    right: 3%;
+    transform: rotate(180deg);
+}
+
+#pic3 {
+    position: fixed;
+    height: 25%; 
+    bottom: 0%;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    h1, h2 {
+        font-size: 3em; 
+    }
+    
+    #pic1, #pic2, #pic3 {
+        font-size: 3em;
+    }
+}
+
+/* Flip Card Styles */
+.flip-card1 {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    cursor: pointer;
+}
+
+.flip-card1-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card1.flipped .flip-card1-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card1-back,
+.flip-card1-front {
+    position: absolute;
+    width: 95%; 
+    height: 160%; 
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 7%;
+}
+
+.flip-card1-back {
+    background-color: #FEFEFE;
+    color: rgb(9, 9, 9);
+    transform: rotateY(180deg);
+}
+
+.flip-card1-front {
+    background-color: #FEFEFE;
+    color: rgb(12, 12, 12);
+}
+
+/* Joker Image Styles */
+#joker {
+    position: fixed;
+    height: 55%;
+    top: 20%;
+    left: 35%;
+    z-index: -1;
+    transform: rotate(-20deg);
+    box-shadow: 10px 10px rgba(245, 244, 244, 0.5);
+}
+
+/* Heading Styles */
+h5 {
+    position: fixed;
+    font-size: 30px;
+    top: -10%;
+    left: 20px;
+}
+
+h6 {
+    position: fixed;
+    font-size: 30px;
+    transform: rotate(180deg);
+    bottom: -80%;
+    right: 10%;
+}
+
+h7 {
+    position: fixed;
+    font-size: 30px;
+    transform: rotate(180deg);
+    bottom: 2%;
+    right: 8%;
+}
+
+h8 {
+    position: fixed;
+    font-size: 30px;
+    top: 0%;
+    left: 15px;
+}
+
+/* Line Styles */
+.lineleft {
+    border-left: 0.2em solid #000000;
+    position: fixed;
+    left: 5%;
+    top: 20%;
+    height: 130%;
+    width: 10%;
+}
+
+.lineright {
+    border-right: 0.2em solid #000000;
+    position: fixed;
+    right: 10%;
+    top: 11%;
+    height: 130%;
+    width: 10%;
+}
+
+.lineup {
+    border-top: 0.2em solid #110b0b;
+    height: 10%;
+    width: 75%;
+    position: fixed;
+    top: 10%;
+    left: 15%;
+}
+
+.linedown {
+    border-bottom: 0.2em solid #110b0b;
+    height: 10%;
+    width: 75%;
+    position: fixed;
+    bottom: -50%;
+    left: 6%;
+}
+
+.lineleft1 {
+    border-left: 0.2em solid #000000;
+    position: fixed;
+    left: 5%;
+    top: 10%;
+    height: 85%;
+    width: 10%;
+}
+
+.lineright1 {
+    border-right: 0.2em solid #000000;
+    position: fixed;
+    right: 10%;
+    top: 5%;
+    height: 85%;
+    width: 10%;
+}
+
+.lineup1 {
+    border-top: 0.2em solid #110b0b;
+    height: 10%;
+    width: 75%;
+    position: fixed;
+    top: 5%;
+    left: 15%;
+}
+
+.linedown1 {
+    border-bottom: 0.2em solid #110b0b;
+    height: 10%;
+    width: 75%;
+    position: fixed;
+    bottom: 5%;
+    left: 6%;
+}
+
+/* Heading Styles */
+h3 {
+    position: fixed;
+    top: 7%;
+    left: 35%;
+    font-size: 25px;
+}
+
+h4 {
+    position: fixed;
+    top: 1%;
+    left: 35%;
+    font-size: 25px; 
+}
+
+
+.Auth {
+    position: fixed;
+    top: 80%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
