@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import Tweet from "./Tweet";
-import { TweetContext } from "./TweetContext";
+import React, { useEffect, useState } from "react";
 import { db } from "../Firebase/firebase";
 import { getDocs, collection, addDoc,deleteDoc,doc,updateDoc } from "firebase/firestore";
 import { auth } from "../Firebase/firebase";
@@ -10,7 +8,6 @@ const TweetList = () => {
   const getTweetsCollection = collection(db, "Post");
   const [post, setPost] = useState([]);
   const [title, setTitle] = useState("");
-  const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
   const [likes, setLikes] = useState(0);
   const [user, setUser] = useState("");

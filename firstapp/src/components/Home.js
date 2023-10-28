@@ -1,18 +1,8 @@
-import "../ver1/homepage.css"; //  TODO Remove this line
-import React, { useState, useEffect } from "react";
+import "../ver1/homepage.css";
+import React from "react";
 import spider from "../ver1/spider.png";
-import { TweetProvider, TweetContext } from "./TweetContext";
 import TweetList from "./tweetList";
-import AddTweet from "./AddTweet";
-import DeleteButton from "./DeleteButton";
-import { db } from "../Firebase/firebase";
-import {
-  collection,
-  onSnapshot,
-  serverTimestamp,
-  addDoc,
-} from "firebase/firestore";
-import { Auth } from "./Auth";
+
 
 const Home = () => {
     return (
@@ -103,10 +93,8 @@ const Home = () => {
                         <p>Messages</p>
                     </div>
                 </div>
-                <DeleteButton /> {/* temporary */}
                 <div className="tweetBox">
                 <TweetList />
-                    {/* <hr className="hr2" /> */}
                 </div>
             </div>
         </div>
